@@ -91,7 +91,6 @@ The system is divided into the following core modules:
 Here are the direct links to each hosted page:
 
 - **[Default Index Page](https://crcms.vercel.app/)**
-- **[Homepage](https://crcms.vercel.app/homepage)**
 - **[Access Portal](https://crcms.vercel.app/access-portal)**
 - **[Admin Settings](https://crcms.vercel.app/admin-settings)**
 - **[Biometric Scanner](https://crcms.vercel.app/biometric-scanner)**

@@ -115,10 +115,10 @@ function AppSidebar() {
 
 export default function DashboardPage() {
   return (
-    <SidebarProvider>
-      <div className="min-h-screen bg-[#06112F] text-white">
+    <div className="min-h-screen bg-[#06112F]">
+      <SidebarProvider>
         <AppSidebar />
-        <SidebarInset>
+        <SidebarInset className="bg-[#06112F]">
           {/* Top Navigation */}
           <header className="bg-[#06112F] border-b border-gray-700 p-4">
             <div className="flex items-center justify-between">
@@ -152,14 +152,14 @@ export default function DashboardPage() {
                       <ChevronDown className="w-4 h-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
+                  <DropdownMenuContent align="end" className="w-56 bg-gray-800 border-gray-700">
+                    <DropdownMenuLabel className="text-white">My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator className="bg-gray-700" />
+                    <DropdownMenuItem className="text-gray-300 hover:bg-gray-700 hover:text-white">
                       <User className="mr-2 h-4 w-4" />
                       Profile
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem className="text-gray-300 hover:bg-gray-700 hover:text-white">
                       <LogOut className="mr-2 h-4 w-4" />
                       Logout
                     </DropdownMenuItem>
@@ -170,11 +170,14 @@ export default function DashboardPage() {
           </header>
 
           {/* Main Content */}
-          <main className="p-6 space-y-6">
+          <main className="p-6 space-y-6 bg-[#06112F]">
             {/* Case Overview Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {caseStats.map((stat) => (
-                <Card key={stat.title} className="bg-white/5 border-gray-700 hover:bg-white/10 transition-colors">
+                <Card
+                  key={stat.title}
+                  className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors"
+                >
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium text-gray-300">{stat.title}</CardTitle>
                     <div className={`p-2 rounded-full ${stat.bgColor}`}>
@@ -195,7 +198,7 @@ export default function DashboardPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Alerts Section */}
-              <Card className="bg-white/5 border-gray-700">
+              <Card className="bg-gray-800/50 border-gray-700">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2 text-white">
                     <AlertTriangle className="w-5 h-5 text-yellow-500" />
@@ -209,7 +212,7 @@ export default function DashboardPage() {
                   {alerts.map((alert) => (
                     <div
                       key={alert.id}
-                      className="flex items-start space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                      className="flex items-start space-x-3 p-3 rounded-lg bg-gray-700/50 hover:bg-gray-700/70 transition-colors"
                     >
                       <div
                         className={`w-2 h-2 rounded-full mt-2 ${
@@ -230,7 +233,7 @@ export default function DashboardPage() {
               </Card>
 
               {/* Quick Actions */}
-              <Card className="bg-white/5 border-gray-700">
+              <Card className="bg-gray-800/50 border-gray-700">
                 <CardHeader>
                   <CardTitle className="text-white">Quick Actions</CardTitle>
                   <CardDescription className="text-gray-400">Frequently used operations</CardDescription>
@@ -242,14 +245,14 @@ export default function DashboardPage() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full justify-start border-gray-600 text-white hover:bg-white/10 bg-transparent"
+                    className="w-full justify-start border-gray-600 text-white hover:bg-gray-700 bg-transparent"
                   >
                     <FileText className="w-4 h-4 mr-2" />
                     File Complaint
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full justify-start border-gray-600 text-white hover:bg-white/10 bg-transparent"
+                    className="w-full justify-start border-gray-600 text-white hover:bg-gray-700 bg-transparent"
                   >
                     <Fingerprint className="w-4 h-4 mr-2" />
                     Scan Biometric
@@ -259,7 +262,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Recent Activity Feed */}
-            <Card className="bg-white/5 border-gray-700">
+            <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2 text-white">
                   <Activity className="w-5 h-5 text-blue-500" />
@@ -272,13 +275,13 @@ export default function DashboardPage() {
                   {recentActivity.map((activity) => (
                     <div
                       key={activity.id}
-                      className="flex items-center space-x-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                      className="flex items-center space-x-4 p-3 rounded-lg bg-gray-700/50 hover:bg-gray-700/70 transition-colors"
                     >
                       <div className="w-2 h-2 bg-blue-500 rounded-full" />
                       <div className="flex-1">
                         <p className="text-white text-sm">{activity.action}</p>
                         <div className="flex items-center space-x-2 mt-1">
-                          <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
+                          <Badge variant="outline" className="text-xs border-gray-600 text-gray-300 bg-gray-800">
                             {activity.case}
                           </Badge>
                           <span className="text-gray-400 text-xs">{activity.time}</span>
@@ -296,7 +299,7 @@ export default function DashboardPage() {
             <p className="text-red-400 text-sm font-medium">🔒 Confidential – Authorized Personnel Only</p>
           </footer>
         </SidebarInset>
-      </div>
-    </SidebarProvider>
+      </SidebarProvider>
+    </div>
   )
 }

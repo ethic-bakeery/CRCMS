@@ -106,12 +106,14 @@ function Navigation() {
             <Link href="/login">
               <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold">Login</Button>
             </Link>
-            <Button
-              variant="outline"
-              className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] bg-transparent"
-            >
-              Request Access
-            </Button>
+            <Link href="/access-portal">
+              <Button
+                variant="outline"
+                className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] bg-transparent"
+              >
+                Request Access
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -145,12 +147,14 @@ function Navigation() {
                 <Link href="/login">
                   <Button className="w-full bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold">Login</Button>
                 </Link>
-                <Button
-                  variant="outline"
-                  className="w-full border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] bg-transparent"
-                >
-                  Request Access
-                </Button>
+                <Link href="/access-portal">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] bg-transparent"
+                  >
+                    Request Access
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -197,13 +201,15 @@ function HeroSection() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] px-8 py-4 text-lg transform hover:scale-105 transition-all duration-200 bg-transparent"
-          >
-            Request Access
-          </Button>
+          <Link href="/access-portal">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] px-8 py-4 text-lg transform hover:scale-105 transition-all duration-200 bg-transparent"
+            >
+              Request Access
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -543,28 +549,34 @@ function CallToActionSection() {
           <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-transparent hover:border-[#FFD700] transition-all duration-300">
             <h3 className="text-xl font-bold text-[#06112F] mb-4">For Agencies</h3>
             <p className="text-gray-700 mb-6">Integrate your agency with our national database system</p>
-            <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold w-full">
-              Request Integration
-            </Button>
+            <Link href="/access-portal">
+              <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold w-full">
+                Request Integration
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-transparent hover:border-[#FFD700] transition-all duration-300">
             <h3 className="text-xl font-bold text-[#06112F] mb-4">For Officers</h3>
             <p className="text-gray-700 mb-6">Apply for system access and start using our platform</p>
-            <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold w-full">
-              Apply for Access
-            </Button>
+            <Link href="/access-portal">
+              <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#06112F] font-bold w-full">
+                Apply for Access
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-transparent hover:border-[#FFD700] transition-all duration-300">
             <h3 className="text-xl font-bold text-[#06112F] mb-4">For Public</h3>
             <p className="text-gray-700 mb-6">Report crimes and access public safety information</p>
-            <Button
-              variant="outline"
-              className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] w-full bg-transparent"
-            >
-              Report a Crime
-            </Button>
+            <Link href="/access-portal">
+              <Button
+                variant="outline"
+                className="border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#06112F] w-full bg-transparent"
+              >
+                Report a Crime
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

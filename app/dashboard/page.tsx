@@ -63,11 +63,11 @@ const recentActivity = [
 ]
 
 const menuItems = [
-  { title: "Case Management", icon: FileText, href: "/dashboard/cases" },
-  { title: "Search Citizens", icon: Search, href: "/dashboard/search" },
-  { title: "Reports", icon: Users, href: "/dashboard/reports" },
-  { title: "Court Updates", icon: Gavel, href: "/dashboard/court" },
-  { title: "Biometric Scanner", icon: Fingerprint, href: "/dashboard/biometric" },
+  { title: "Case Management", icon: FileText, href: "/case-details" },
+  { title: "Search Citizens", icon: Search, href: "/citizen-profile" },
+  // { title: "Reports", icon: Users, href: "/reports" },
+  { title: "Court Updates", icon: Gavel, href: "/court-processing" },
+  { title: "Biometric Scanner", icon: Fingerprint, href: "/biometric-scanner" },
 ]
 
 function AppSidebar() {
